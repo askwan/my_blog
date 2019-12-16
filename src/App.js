@@ -1,19 +1,26 @@
 import React from 'react';
 
-import { Calendar } from 'antd';
-import RichTextEditor from './components/RichTextEditor';
+import { Route, HashRouter, Switch, Redirect, NavLink, Link } from 'dva/router';
+import {Button} from 'antd'
+import Home from './pages/home/Home'
+import Admin from './pages/admin/Admin';
 
-function App() {
+function App({history}) {
+  const pathTo = pathname =>{
+    history.push(pathname);
+  }
   return (
-    <div className="App">
-      <div style={{ width: 300, border: '1px solid #d9d9d9' }}>
-        <Calendar fullscreen={false} />
-      </div>
-      <div style={{width:600}} className='border'>
-      <RichTextEditor />
-
-      </div>
-    </div>
+    <>
+      <Button onClick={()=>pathTo('/')}>home</Button>
+      <Button onClick={()=>pathTo('/admin')}>admin</Button>
+      <HashRouter>
+        <Switch>
+          <Route path='/admin' component={Admin} />
+          <Route path='/home' component={Home} />
+          <Redirect from='/' to='/home' />
+        </Switch>
+      </HashRouter>
+    </>
   );
 }
 

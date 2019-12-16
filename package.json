@@ -12,6 +12,7 @@
     "braft-extensions": "^0.0.20",
     "customize-cra": "^0.9.1",
     "draft-js-prism": "^1.0.6",
+    "dva": "^2.4.1",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "node-sass": "^4.13.0",
