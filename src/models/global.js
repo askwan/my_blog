@@ -12,7 +12,7 @@ export default {
         if(pathname === '/home'){
           // console.log(window.__app,'app');
           // console.log(require('./homeUi').default);
-          window.__app.model(require('./homeUi').default)
+          // window.__app.model(require('./homeUi').default)
         }
       })
     }

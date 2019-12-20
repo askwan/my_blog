@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Route, HashRouter, Switch, Redirect, NavLink, Link } from 'dva/router';
+import { Route, HashRouter, Switch, Redirect } from 'dva/router';
 import {Button} from 'antd'
 import Home from './pages/home/Home'
 import Admin from './pages/admin/Admin';
@@ -11,8 +11,8 @@ function App({history}) {
   }
   return (
     <>
-      <Button onClick={()=>pathTo('/')}>home</Button>
-      <Button onClick={()=>pathTo('/admin')}>admin</Button>
+      {/* <Button onClick={()=>pathTo('/')}>home</Button>
+      <Button onClick={()=>pathTo('/admin')}>admin</Button> */}
       <HashRouter>
         <Switch>
           <Route path='/admin' component={Admin} />

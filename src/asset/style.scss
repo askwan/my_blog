@@ -1,0 +1,26 @@
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+.bg-white{
+  background: #fff;
+}
+
+.no-pd{
+  padding: 0;
+}
+.no-mg{
+  margin: 0;
+}
+
+.trigger{
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+  &:hover{
+    color: #1890ff;
+  }
+}

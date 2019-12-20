@@ -5,7 +5,7 @@ export class Home extends Component {
   render() {
     console.log(this.props,'props')
     return (
-      <div>
+      <div className="fill">
         home
       </div>
     )
